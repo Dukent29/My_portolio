@@ -13,6 +13,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use('/uploads', express.static('uploads')); // Serve static files from the uploads directory
 
 // Routes
 app.use('/api/projects', projectRoutes);

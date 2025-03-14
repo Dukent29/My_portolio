@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+</head>
+<body>
+    <h1>Add a New Project</h1>
+    <form id="projectForm" enctype="multipart/form-data">
+        <input type="text" id="title" name="title" placeholder="Project Title" required>
+        <textarea id="description" name="description" placeholder="Project Description" required></textarea>
+        <input type="text" id="technologies" name="technologies" placeholder="Technologies (comma separated)" required>
+        <input type="file" id="image" name="image" required>
+        <button type="submit">Add Project</button>
+    </form>
+    <script src="assets/js/add-project.js"></script>
+</body>
+</html>
