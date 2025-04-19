@@ -294,6 +294,21 @@ span{
     flex-direction: column;
     gap: 1rem;
     color: #4b5563;
+
+}
+/* competence supp */
+#competence-supp{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+#competence-supp h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #111827;
+    padding: 2rem;
+    font-weight: bold;
 }
 /* featured project */
 .featured_projects{
@@ -308,25 +323,37 @@ span{
 }
 .featured_projects .projects{
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 10px; /* Add spacing between labels */
+    list-style: none; /* Remove default list styling */
     padding: 2rem;
+    margin: 0;
+    justify-content: center;
 }
 .projects .project{
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 30%; /* Set a fixed width for all project cards */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+     /* Center text */
 }
 .projects .project .project_img{
-    width: 100%;
+    width: 100%; /* Set a fixed width */
 }
+
 .projects .project .project_img img{
-    width: 100%;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    width: 100%; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-top-left-radius: 8px; /* Optional: Add rounded corners for a cleaner look */
+    border-top-right-radius: 8px;
 }
 .project_info{
-    padding: 1rem;
+    padding: 15px; /* Add padding inside the project info */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -564,5 +591,85 @@ a:hover {
     justify-content: center;
     flex-direction: column;
 }
+
+/* General styles for the skills list */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 10px; /* Add spacing between labels */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.skills-list li {
+    padding: 8px 12px; /* Add padding inside the labels */
+    border-radius: 20px; /* Make the labels rounded */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* White text color */
+    text-align: center;
+    cursor: default; /* Disable pointer cursor */
+}
+
+/* Specific colors for each skill with transparency */
+.skills-list .javascript {
+    background-color: rgba(247, 223, 30, 0.8); /* JavaScript yellow with 80% opacity */
+    color: #000; /* Black text for better contrast */
+}
+
+.skills-list .html5 {
+    background-color: rgba(227, 76, 38, 0.8); /* HTML5 orange with 80% opacity */
+}
+
+.skills-list .css3 {
+    background-color: rgba(21, 114, 182, 0.8); /* CSS3 blue with 80% opacity */
+}
+
+.skills-list .php {
+    background-color: rgba(79, 91, 147, 0.8); /* PHP purple with 80% opacity */
+}
+
+.skills-list .angular {
+    background-color: rgba(221, 0, 49, 0.8); /* Angular red with 80% opacity */
+}
+
+.skills-list .vuejs {
+    background-color: rgba(66, 184, 131, 0.8); /* Vue.js green with 80% opacity */
+}
+
+.skills-list .bootstrap {
+    background-color: rgba(121, 82, 179, 0.8); /* Bootstrap purple with 80% opacity */
+}
+
+.skills-list .sass {
+    background-color: rgba(204, 102, 153, 0.8); /* SASS pink with 80% opacity */
+}
+
+.skills-list .figma {
+    background-color: rgba(162, 89, 255, 0.8); /* Figma purple with 80% opacity */
+}
+
+.skills-list .wordpress {
+    background-color: rgba(33, 117, 155, 0.8); /* WordPress blue with 80% opacity */
+}
+
+.skills-list .flutter {
+    background-color: rgba(2, 86, 155, 0.8); /* Flutter blue with 80% opacity */
+}
+
+.skills-list .nuxt {
+    background-color: rgba(0, 197, 142, 0.8); /* Nuxt green with 80% opacity */
+}
+
+.skills-list .mvc {
+    background-color: rgba(108, 117, 125, 0.8); /* Neutral gray for MVC with 80% opacity */
+}
+
+.skills-list .symfony {
+    background-color: rgba(0, 0, 0, 0.8); /* Symfony black with 80% opacity */
+}
+
 /* project css */
 
