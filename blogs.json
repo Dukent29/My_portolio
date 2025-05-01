@@ -1,0 +1,8 @@
+[
+    {
+      "title": "Smart Garden",
+      "description": "Application connectée pour arroser les plantes automatiquement.",
+      "tech": ["Next.js", "Node js", "PostgreSQL"],
+      "github_link": "https://github.com/kevin/task-manager"
+    }
+]
