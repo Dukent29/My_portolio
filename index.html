@@ -36,11 +36,27 @@
             <p>I create beautiful, functional, and user-friendly digital experiences. Specialized in React, Node.js, and modern web technologies.</p>
         </div>
         <div class="buttons">
-            <button class="work"><a href="">view my Work</a></button>
-            <button class="contact_me"><a href="">Get in touch</a></button>
+            <button class="work">
+                <a href="assets/files/Mulinda_kevin_cv_lm_2025-2027.pdf" target="_blank">View My Work</a>
+            </button>
+            <button class="contact_me" id="openModal"><a href="">Get in touch</a></button>
         </div>
     </div>
-
+    <!-- contact modal -->
+     <!-- Modal -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="modal-title">Contact Me</h2>
+      <form class="contact-form" action="/submit-form" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
     <!-- my Expectise -->
     <div id="expectises" class="expectise">
         <h2>Expectise</h2>
@@ -139,10 +155,10 @@
 
     <!-- footer -->
     <div class="footer">
-        <div class="footer_info">
+        <div class="footer_info" id="contact">
             <h3>Let's Work Together</h3>
             <p>Full-Stack Developer & UI Designer, I'm always interested in hearing about new projects and opportunities.</p>
-            <button><a href="">Get In Touch</a></button>
+            <button id="openModal">Get In Touch</button>
         </div>
     </div>
     <div class="footer_social">
@@ -159,5 +175,6 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/blogs.js"></script>
     <script src="assets/js/projects.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 </html>
