@@ -1,7 +1,7 @@
 [
   {
-    "title": "Task Management App",
-    "description": "A collaborative task management application with real-time updates.",
+    "title": "Application de Gestion de Tâches",
+    "description": "Une application collaborative de gestion de tâches avec mises à jour en temps réel. Idéale pour les équipes souhaitant organiser leur travail efficacement et suivre la progression des projets en direct.",
     "tech": [
       "Next.js",
       "Socket.io",
@@ -12,7 +12,7 @@
   },
   {
     "title": "Smart Garden",
-    "description": "Application connectée pour arroser les plantes automatiquement.",
+    "description": "Application web connectée permettant de surveiller l’état des plantes et d’automatiser leur arrosage grâce à des capteurs et à une planification intelligente.",
     "tech": [
       "HTML",
       "JavaScript",
@@ -23,10 +23,10 @@
   },
   {
     "title": "bookMe",
-    "description": "Application connectée pour reservasrions.",
+    "description": "Une application mobile intuitive pour réserver des rendez-vous ou des événements en ligne. Conçue pour offrir une expérience fluide aux utilisateurs et une gestion simple pour les prestataires.",
     "tech": [
-      "flutter",
-      "Node Js"
+      "Flutter",
+      "Node.js"
     ],
     "image": "images/gruppopiu-tKnt5O4q-f8-unsplash.jpg",
     "github_link": "https://github.com/Dukent29/bookmi"

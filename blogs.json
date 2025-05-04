@@ -1,10 +1,10 @@
 [
   {
     "title": "Smart Garden",
-    "description": "Application connectée pour arroser les plantes automatiquement.",
+    "description": "Application web connectée permettant de surveiller l’état des plantes et d’automatiser leur arrosage grâce à des capteurs et à une planification intelligente. Développée comme une solution IoT complète pour assister les jardiniers dans l’entretien de leurs plantes.",
     "tech": [
       "Next.js",
-      "Node js",
+      "Node.js",
       "PostgreSQL"
     ],
     "github_link": "https://github.com/Dukent29/smart-gardening"
