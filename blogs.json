@@ -1,8 +1,21 @@
 [
-    {
-      "title": "Smart Garden",
-      "description": "Application connectée pour arroser les plantes automatiquement.",
-      "tech": ["Next.js", "Node js", "PostgreSQL"],
-      "github_link": "https://github.com/Dukent29/smart-gardening"
-    }
+  {
+    "title": "Smart Garden",
+    "description": "Application connectée pour arroser les plantes automatiquement.",
+    "tech": [
+      "Next.js",
+      "Node js",
+      "PostgreSQL"
+    ],
+    "github_link": "https://github.com/Dukent29/smart-gardening"
+  },
+  {
+    "title": "twitter",
+    "description": "just started on this sunday working on twitter new features",
+    "tech": [
+      "Rust",
+      "flutter"
+    ],
+    "github_link": "https://google.com"
+  }
 ]

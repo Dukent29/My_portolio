@@ -1,5 +1,5 @@
 
-  fetch('projets.json')
+  fetch('projects.json')
     .then(res => res.json())
     .then(projets => {
       const projectList = document.getElementById('project-list')
