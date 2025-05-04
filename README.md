@@ -32,8 +32,7 @@ To add a new project to the portfolio, follow these steps:
 1. Open your terminal.
 2. Run the following command:
    ```bash
-   node assets/js/blog/add-blogs.js  
-   ## How to delete a Project
+   node assets/js/blog/add-blogs.js
 
  ## How to delete a blogs
 1. Open your terminal.
