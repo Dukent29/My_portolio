@@ -8,5 +8,17 @@
       "PostgreSQL"
     ],
     "github_link": "https://github.com/Dukent29/smart-gardening"
+  },
+  {
+    "title": "My portfolio",
+    "description": "this project not only permited me to make my portfolio but to come back and learn about the foundamental of coding , structurin a website",
+    "tech": [
+      "html",
+      "css",
+      "js",
+      "json",
+      "boostrap"
+    ],
+    "github_link": "https://github.com/Dukent29/My_portolio"
   }
 ]
