@@ -187,6 +187,7 @@ body{
 .links ul li a{
     color: #4b5563;
     font-size: 16px;
+    text-decoration: none;
 }
 .links ul li a:hover{
     color: #4f46e5;
@@ -232,6 +233,7 @@ span{
 }
 .buttons .work a{
     color: #fff;
+    text-decoration: none;
 }
 .buttons .contact_me{
     padding: 1rem 2rem;
@@ -242,6 +244,7 @@ span{
 }
 .buttons .contact_me a{
     color: #4b5563;
+    text-decoration: none;
 }
 /* expectise */
 .expectise{
@@ -462,6 +465,7 @@ span{
 .social_links a{
     color: #4b5563;
     font-size: 22px;
+    text-decoration: none;
 }
 /* buttons a links */
 button {
@@ -501,6 +505,28 @@ a:hover {
     color: #4f46e5; /* Change link color on hover */
     text-decoration: underline; /* Underline on hover */
 }
+
+/* General button styles */
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  transform: scale(1.05); /* Slightly enlarges the button */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for a pop-out effect */
+}
+
+/* For buttons with links inside */
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover a {
+  color: #6d28d9; /* Optional: Change text color on hover */
+}
+
 /* icons */
 .expectise i{
     color: #4f46e5;
@@ -519,6 +545,18 @@ a:hover {
     background-color: transparent!important;
     padding: 8px;
 }
+
+/* General icon styles */
+i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for icons */
+i:hover {
+  transform: scale(1.2); /* Slightly enlarges the icon */
+  color: #4f46e5; /* Changes the icon color */
+}
+
 /* featured project & blogs */
 .styled-title{
     display: flex;
@@ -526,6 +564,7 @@ a:hover {
 }
 .styled-title a{
     padding-right: 2rem;
+    text-decoration: none;
 }
 
 /* Add Blog Form */
@@ -674,6 +713,81 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Symfony black with 80% opacity */
 }
 
+/* Initial state for the skills-list items */
+.skills-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add delays to each skill item for staggered animation */
+.skills-list li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.skills-list li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.skills-list li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.skills-list li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.skills-list li:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.skills-list li:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.skills-list li:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.skills-list li:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.skills-list li:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.skills-list li:nth-child(10) {
+  animation-delay: 2s;
+}
+
+.skills-list li:nth-child(11) {
+  animation-delay: 2.2s;
+}
+
+.skills-list li:nth-child(12) {
+  animation-delay: 2.4s;
+}
+
+.skills-list li:nth-child(13) {
+  animation-delay: 2.6s;
+}
+
+.skills-list li:nth-child(14) {
+  animation-delay: 2.8s;
+}
 
 /* Modal Styles */
 .modal {
@@ -742,4 +856,149 @@ a:hover {
     border-color: #4f46e5;
 }
 
+/* css animation */
+/* Initial state for the animation */
+.presentation {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s ease-out forwards;
+  }
+  
+  /* Keyframes for the slide-in animation */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  /* expectise */
+  /* Center animation for the expectise container */
+.expectise {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInCenter 1s ease-out forwards;
+  }
+  
+  /* Keyframes for fading in and scaling */
+  @keyframes fadeInCenter {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Slide-in animation for each expect1 */
+  .expect1 {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInRight 1s ease-out forwards;
+  }
+  
+  /* Keyframes for sliding in from the right */
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Add delays to each expect1 for staggered animation */
+  .expect1:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  
+  .expect1:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .expect1:nth-child(3) {
+    animation-delay: 1.5s;
+  }
 
+/* Initial state for the project items */
+.project {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 1s ease-out forwards;
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add staggered animation delays for projects */
+.project:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.project:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.project:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.project:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Add more delays as needed for additional projects */
+
+/* Initial state for the blog items */
+.blog {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add staggered animation delays for blogs */
+.blog:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.blog:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.blog:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.blog:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Add more delays as needed for additional blogs */
