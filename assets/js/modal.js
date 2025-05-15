@@ -1,11 +1,13 @@
 // Get modal elements
 const modal = document.getElementById("contactModal");
-const openModalBtn = document.getElementById("openModal");
+const openModalBtns = document.querySelectorAll(".openModalBtn");
 const closeModalBtn = document.querySelector(".close");
 
 // Open modal
-openModalBtn.addEventListener("click", () => {
-  modal.style.display = "block";
+openModalBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
 });
 
 // Close modal

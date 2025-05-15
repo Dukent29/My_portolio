@@ -241,6 +241,7 @@ span{
     color: #fff;
     border: none;
     border-radius: 0.5rem;
+    border: solid 1px #4f46e5;
 }
 .buttons .contact_me a{
     color: #4b5563;
