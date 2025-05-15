@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Application de Gestion de Tâches",
+    "description": "Une application collaborative de gestion de tâches avec mises à jour en temps réel. Idéale pour les équipes souhaitant organiser leur travail efficacement et suivre la progression des projets en direct.",
+    "tech": [
+      "Next.js",
+      "Socket.io",
+      "MongoDB"
+    ],
+    "image": "images/david-pupaza-Q9-QEy1_jYI-unsplash.jpg",
+    "github_link": "https://github.com/kevin/task-manager"
+  },
+  {
+    "title": "Smart Garden",
+    "description": "Application web connectée permettant de surveiller l’état des plantes et d’automatiser leur arrosage grâce à des capteurs et à une planification intelligente.",
+    "tech": [
+      "HTML",
+      "JavaScript",
+      "Supabase"
+    ],
+    "image": "images/zoe-rich.jpg",
+    "github_link": "https://github.com/kevin/smart-garden"
+  },
+  {
+    "title": "bookMe",
+    "description": "Une application mobile intuitive pour réserver des rendez-vous ou des événements en ligne. Conçue pour offrir une expérience fluide aux utilisateurs et une gestion simple pour les prestataires.",
+    "tech": [
+      "Flutter",
+      "Node.js"
+    ],
+    "image": "images/gruppopiu-tKnt5O4q-f8-unsplash.jpg",
+    "github_link": "https://github.com/Dukent29/bookmi"
+  }
+]
