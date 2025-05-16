@@ -336,9 +336,8 @@ span{
 .featured_projects .projects{
     display: flex;
     flex-wrap: wrap; /* Allow wrapping to the next line */
-    gap: 10px; /* Add spacing between labels */
+    gap: 2rem; /* Add spacing between labels */
     list-style: none; /* Remove default list styling */
-    padding: 2rem;
     margin: 0;
     justify-content: center;
 }
