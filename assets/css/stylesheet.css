@@ -800,6 +800,7 @@ i:hover {
 
 /* Modal Styles */
 .modal {
+  margin-top: 4rem;
   display: none; /* Hidden by default */
   position: fixed;
   z-index: 1000;
@@ -813,6 +814,7 @@ i:hover {
 
 
 .modal-content {
+  
   background-color: #fff;
   margin: 10% auto;
   padding: 20px;
