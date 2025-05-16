@@ -15,7 +15,7 @@
               ${p.tech.map(t => `<li>${t}</li>`).join('')}
             </ul>
             <a href="${p.github_link}" target="_blank" style="color: #6d28d9; text-decoration: underline; font-weight: bold;">
-              View Project ↗
+              Jeter un œil 👀 ↗
             </a>
           </div>
         </div>
