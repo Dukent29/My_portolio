@@ -163,26 +163,34 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
-    padding: auto;
-    padding: 2rem;
+    padding: 1.5rem;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position: fixed;
     width: 100%;
-    z-index: 999999!important;
+    z-index: 999998!important;
     margin-top: 0;
     top: 0%;
+}
+.logo{
+  width: 50%;
+
+}
+.links{
+  width: 50%;
 }
 .logo h3{
     color: #111827;
     font-size: 18px;
     font-weight: bold;
 }
+
 .links ul{
     display: flex;
     align-items: center;
     gap: 1rem;
     padding-right: 3rem;
+    justify-content: flex-end;
 }
 .links ul li a{
     color: #4b5563;
@@ -241,6 +249,7 @@ span{
     color: #fff;
     border: none;
     border-radius: 0.5rem;
+    border: solid 1px #4f46e5;
 }
 .buttons .contact_me a{
     color: #4b5563;
@@ -1000,5 +1009,280 @@ i:hover {
 .blog:nth-child(4) {
   animation-delay: 0.8s;
 }
+.menu{
+    display: none;
+}
+
+/* Side Menu Styles */
+.side-menu {
+  z-index: 999999!important;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  z-index: 2000;
+  transition: left 0.3s cubic-bezier(.77,0,.18,1);
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.close-side-menu {
+  font-size: 2rem;
+  color: #4f46e5;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.side-menu .links-side ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.side-menu .links-side li {
+  list-style: none;
+  color: #4b5563;
+
+}
+.side-menu .links-side li a {
+  list-style: none;
+  color: #4b5563;
+  font-size: 18px;
+
+}
 
 /* Add more delays as needed for additional blogs */
+/* responsive */
+/* below 1440px */
+@media (max-width: 1440px) {
+    
+    .logo{
+      width: 30%;
+    }
+    .links{
+        width: 55%;
+        justify-content: flex-end;
+        display: flex;
+    }
+    .presentation{
+        margin-top: 8rem;
+    }
+    .title h1{
+        font-size: 2.5rem;
+    }
+    .title p{
+        font-size: 1rem;
+    }
+    
+}
+@media (max-width: 1024px) {
+  
+    .expectises {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    }
+    .expectises h4{
+        font-size: 18px;
+    }
+    .expectises p{
+        font-size: 14px;
+        margin: 0!important;
+    }
+    .featured_projects .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 1rem;
+      margin: 0;
+      justify-content: center;
+  }
+    .projects .project {
+      width: 30%; /* Set a fixed width for all project cards */
+      max-width: 300px; /* Set a maximum width for smaller screens */
+      margin: 0 auto; /* Center the project card */
+    }
+    .projects .project .project_info h3{
+      font-size: 18px;
+    }
+    .projects .project .project_info p{
+      font-size: 14px;
+    }
+    .projects .project .project_info .label{
+      display: flex;
+      flex-wrap: wrap; /* Allow labels to wrap */
+      gap: .3rem;
+    }
+    .projects .project .project_info a{
+      font-size: 12px;
+    }
+    .projects .project .project_info .label li{
+      font-size: 12px;
+      padding: 0.3rem 0.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .latest_blog {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 2rem;
+}
+
+.latest_blog .blogs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.blog {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: #f9f9f9;
+}
+
+.blog h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #111827;
+    font-size: 18px;
+}
+
+.blog p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.blog .label {
+    display: flex;
+    gap: .3rem;
+    
+}
+.blog .label li {
+    font-size: 12px;
+    padding: 0.3rem 0.5rem;
+}
+.blog a{
+    font-size: 12px;
+}
+
+.footer_info button {
+    padding: 1rem;
+    background: #f3f4f6;
+    color: #4b5563;
+    border: none;
+    border-radius: 0.5rem;
+    width: 20%;
+    align-self: center;
+}
+}
+
+@media (max-width: 768px){
+   
+    .logo{
+      width: 30%;
+    }
+    .links{
+        display: none;
+        margin: 0;
+    }
+    
+    .menu{
+        display: block;
+        width: 30%;
+        text-align: center;
+    }
+    .menu i{
+      color: #4f46e5;
+      font-size: 30px;
+      
+    }
+    .presentation{
+        margin-top: 8rem;
+    }
+    .title h1{
+        font-size: 2.5rem;
+    }
+    .title p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 684px){
+    .expectises {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+    .expectises h4{
+        font-size: 18px;
+    }
+    .expectises p{
+        font-size: 14px;
+        margin: 0!important;
+    }
+    .projects .project {
+      width: 100%; /* Set a fixed width for all project cards */
+      max-width: 100%; /* Set a maximum width for smaller screens */
+      margin: 0 auto; /* Center the project card */
+    }
+    .project_info h3 {
+    font-size: 1rem;
+    color: #111827;
+    font-weight: bold;
+}
+    .blogs{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+
+    } 
+    .blog h3 {
+    font-size: 1rem;
+    color: #111827;
+    font-weight: bold;
+}
+    .featured_projects h1 {
+    font-size: 1.2rem;
+    color: #111827;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.latest_blog h1 {
+    font-size: 1.2rem;
+    color: #111827;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+.expectise h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #111827;
+    padding: 2rem;
+    font-weight: bold;
+}
+#competence-supp h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #111827;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+}
