@@ -1287,3 +1287,108 @@ i:hover {
 }
 
 }
+/* dark mode */
+/* Dark Theme */
+body.dark-mode {
+  background-color: #18181b;
+  color: #e5e7eb;
+}
+body.dark-mode .header,
+body.dark-mode .expectise,
+body.dark-mode .featured_projects,
+body.dark-mode .latest_blog,
+body.dark-mode .modal-content,
+body.dark-mode .side-menu,
+body.dark-mode .footer,
+body.dark-mode .footer_social {
+  background-color: #23232a !important;
+  color: #e5e7eb !important;
+}
+body.dark-mode .project,
+body.dark-mode .blog,
+body.dark-mode .expectises .expect1,
+body.dark-mode .expectises .expect2,
+body.dark-mode .expectises .expect3 {
+  background-color: #23232a !important;
+  color: #e5e7eb !important;
+  border-color: #333;
+}
+body.dark-mode .project_info h3,
+body.dark-mode .blog h3,
+body.dark-mode .footer h3,
+body.dark-mode .modal-title {
+  color: #fff !important;
+}
+body.dark-mode .project_info p,
+body.dark-mode .blog p,
+body.dark-mode .footer_info,
+body.dark-mode .copyrights {
+  color: #bdbdbd !important;
+}
+body.dark-mode .label li,
+body.dark-mode .skills-list li {
+  filter: brightness(0.85);
+  color: #fff !important;
+}
+body.dark-mode .links ul li a,
+body.dark-mode .social_links a {
+  color: #bdbdbd !important;
+}
+body.dark-mode .links ul li a:hover,
+body.dark-mode .social_links a:hover {
+  color: #a5b4fc !important;
+}
+body.dark-mode .view_project i {
+  color: #a5b4fc !important;
+}
+body.dark-mode .modal {
+  background-color: rgba(24, 24, 27, 0.95) !important;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #23232a;
+  color: #e5e7eb;
+  border-color: #333;
+}
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+  border-color: #a5b4fc;
+}
+body.dark-mode button,
+body.dark-mode #contact-form button,
+body.dark-mode #blogForm button {
+  background: #4f46e5;
+  color: #fff;
+}
+body.dark-mode button:hover,
+body.dark-mode #contact-form button:hover,
+body.dark-mode #blogForm button:hover {
+  background: #a5b4fc;
+  color: #23232a;
+}
+
+/* Floating Dark Mode Button */
+#darkModeToggle {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999999;
+  background: #23232a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+#darkModeToggle:hover {
+  background: #4f46e5;
+  color: #fff;
+  transform: scale(1.1);
+}
