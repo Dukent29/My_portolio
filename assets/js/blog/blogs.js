@@ -14,7 +14,7 @@ fetch('blogs.json')
                 ${b.tech.map(t => `<li>${t}</li>`).join('')}
                 </ul>
                 <a href="${b.github_link}" target="_blank" style="color: #6d28d9; text-decoration: underline; font-weight: bold;">
-                View Blog ↗
+                Explorer le blog ↗
                 </a>
             </div>
             </div>

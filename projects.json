@@ -3,8 +3,7 @@
     "title": "Application de Gestion de Tâches",
     "description": "Une application collaborative de gestion de tâches avec mises à jour en temps réel. Idéale pour les équipes souhaitant organiser leur travail efficacement et suivre la progression des projets en direct.",
     "tech": [
-      "Next.js",
-      "Socket.io",
+      "symfony",
       "MongoDB"
     ],
     "image": "images/david-pupaza-Q9-QEy1_jYI-unsplash.jpg",
@@ -14,9 +13,8 @@
     "title": "Smart Garden",
     "description": "Application web connectée permettant de surveiller l’état des plantes et d’automatiser leur arrosage grâce à des capteurs et à une planification intelligente.",
     "tech": [
-      "HTML",
-      "JavaScript",
-      "Supabase"
+      "Node.js",
+      "Next.js"
     ],
     "image": "images/zoe-rich.jpg",
     "github_link": "https://github.com/kevin/smart-garden"
