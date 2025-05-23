@@ -1313,6 +1313,23 @@ body.dark-mode .expectises .expect3 {
   color: #e5e7eb !important;
   border-color: #333;
 }
+body.dark-mode .featured_projects{
+  margin-top: 0;
+  padding-top: 2rem;
+}
+body.dark-mode .latest_blog{
+  margin-top: 0;
+}
+body.dark-mode .footer_social{
+  background-color: #18181b !important;
+}
+body.dark-mode .presentation h1{ 
+  color: #fff !important;
+}
+body.dark-mode .presentation p {
+  color: #bdbdbd !important;
+}
+
 body.dark-mode .project_info h3,
 body.dark-mode .blog h3,
 body.dark-mode .footer h3,
