@@ -1323,12 +1323,21 @@ body.dark-mode .latest_blog{
 body.dark-mode .footer_social{
   background-color: #18181b !important;
 }
-body.dark-mode .presentation h1{ 
+
+body.dark-mode .presentation p,body.dark-mode .expectise h2,
+body.dark-mode .expectises p,
+body.dark-mode .project_info p,
+body.dark-mode .blog p,
+body.dark-mode .footer_info,
+body.dark-mode .copyrights,
+body.dark-mode .blog h3,
+body.dark-mode .project_info h3,
+body.dark-mode .expectise h2,body.dark-mode .presentation h1,
+body.dark-mode .sub-title, body.dark-mode .styled-title h1, body.dark-mode #competence-supp h2,
+body.dark-mode li{
   color: #fff !important;
 }
-body.dark-mode .presentation p {
-  color: #bdbdbd !important;
-}
+
 
 body.dark-mode .project_info h3,
 body.dark-mode .blog h3,
