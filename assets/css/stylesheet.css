@@ -279,6 +279,9 @@ span{
     color: #4b5563;
     margin-bottom: 2rem;
 }
+body.dark-mode .expectise p{
+  color: #fff;
+}
 .expectises{
     display: flex;
     justify-content: center;
