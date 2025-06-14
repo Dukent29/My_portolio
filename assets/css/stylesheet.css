@@ -321,7 +321,8 @@ body.dark-mode .expectise p{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 #competence-supp h2{
     text-align: center;
@@ -650,160 +651,59 @@ i:hover {
     flex-direction: column;
 }
 
-/* General styles for the skills list */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping to the next line */
-    gap: 10px; /* Add spacing between labels */
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-    margin: 0;
-    justify-content: center;
+.scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.skills-list li {
-    padding: 8px 12px; /* Add padding inside the labels */
-    border-radius: 20px; /* Make the labels rounded */
-    font-size: 14px; /* Adjust font size */
-    font-weight: bold; /* Make the text bold */
-    color: #fff; /* White text color */
-    text-align: center;
-    cursor: default; /* Disable pointer cursor */
+.skills-list.marquee {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
 }
 
-/* Specific colors for each skill with transparency */
-.skills-list .javascript {
-    background-color: rgba(247, 223, 30, 0.8); /* JavaScript yellow with 80% opacity */
-    color: #000; /* Black text for better contrast */
-}
-
-.skills-list .html5 {
-    background-color: rgba(227, 76, 38, 0.8); /* HTML5 orange with 80% opacity */
-}
-
-.skills-list .css3 {
-    background-color: rgba(21, 114, 182, 0.8); /* CSS3 blue with 80% opacity */
-}
-
-.skills-list .php {
-    background-color: rgba(79, 91, 147, 0.8); /* PHP purple with 80% opacity */
-}
-
-.skills-list .angular {
-    background-color: rgba(221, 0, 49, 0.8); /* Angular red with 80% opacity */
-}
-
-.skills-list .vuejs {
-    background-color: rgba(66, 184, 131, 0.8); /* Vue.js green with 80% opacity */
-}
-
-.skills-list .bootstrap {
-    background-color: rgba(121, 82, 179, 0.8); /* Bootstrap purple with 80% opacity */
-}
-
-.skills-list .sass {
-    background-color: rgba(204, 102, 153, 0.8); /* SASS pink with 80% opacity */
-}
-
-.skills-list .figma {
-    background-color: rgba(162, 89, 255, 0.8); /* Figma purple with 80% opacity */
-}
-
-.skills-list .wordpress {
-    background-color: rgba(33, 117, 155, 0.8); /* WordPress blue with 80% opacity */
-}
-
-.skills-list .flutter {
-    background-color: rgba(2, 86, 155, 0.8); /* Flutter blue with 80% opacity */
-}
-
-.skills-list .nuxt {
-    background-color: rgba(0, 197, 142, 0.8); /* Nuxt green with 80% opacity */
-}
-
-.skills-list .mvc {
-    background-color: rgba(108, 117, 125, 0.8); /* Neutral gray for MVC with 80% opacity */
-}
-
-.skills-list .symfony {
-    background-color: rgba(0, 0, 0, 0.8); /* Symfony black with 80% opacity */
-}
-
-/* Initial state for the skills-list items */
-.skills-list li {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Keyframes for fade-in and slide-up animation */
-@keyframes fadeInUp {
+@keyframes marquee {
   0% {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(0%);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%);
   }
 }
 
-/* Add delays to each skill item for staggered animation */
-.skills-list li:nth-child(1) {
-  animation-delay: 0.2s;
+.skills-list li {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: default;
+  flex: 0 0 auto;
+  opacity: 1;
+  transform: none;
+  animation: none;
 }
 
-.skills-list li:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.skills-list li:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.skills-list li:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-.skills-list li:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.skills-list li:nth-child(6) {
-  animation-delay: 1.2s;
-}
-
-.skills-list li:nth-child(7) {
-  animation-delay: 1.4s;
-}
-
-.skills-list li:nth-child(8) {
-  animation-delay: 1.6s;
-}
-
-.skills-list li:nth-child(9) {
-  animation-delay: 1.8s;
-}
-
-.skills-list li:nth-child(10) {
-  animation-delay: 2s;
-}
-
-.skills-list li:nth-child(11) {
-  animation-delay: 2.2s;
-}
-
-.skills-list li:nth-child(12) {
-  animation-delay: 2.4s;
-}
-
-.skills-list li:nth-child(13) {
-  animation-delay: 2.6s;
-}
-
-.skills-list li:nth-child(14) {
-  animation-delay: 2.8s;
-}
+.skills-list .javascript { background-color: rgba(247, 223, 30, 0.8); color: #000; }
+.skills-list .html5 { background-color: rgba(227, 76, 38, 0.8); }
+.skills-list .css3 { background-color: rgba(21, 114, 182, 0.8); }
+.skills-list .php { background-color: rgba(79, 91, 147, 0.8); }
+.skills-list .angular { background-color: rgba(221, 0, 49, 0.8); }
+.skills-list .vuejs { background-color: rgba(66, 184, 131, 0.8); }
+.skills-list .bootstrap { background-color: rgba(121, 82, 179, 0.8); }
+.skills-list .sass { background-color: rgba(204, 102, 153, 0.8); }
+.skills-list .figma { background-color: rgba(162, 89, 255, 0.8); }
+.skills-list .wordpress { background-color: rgba(33, 117, 155, 0.8); }
+.skills-list .flutter { background-color: rgba(2, 86, 155, 0.8); }
+.skills-list .nuxt { background-color: rgba(0, 197, 142, 0.8); }
+.skills-list .mvc { background-color: rgba(108, 117, 125, 0.8); }
+.skills-list .symfony { background-color: rgba(0, 0, 0, 0.8); }
 
 /* Modal Styles */
 .modal {
