@@ -1204,13 +1204,15 @@ body.dark-mode {
 body.dark-mode .header,
 body.dark-mode .expectise,
 body.dark-mode .featured_projects,
-body.dark-mode .latest_blog,
 body.dark-mode .modal-content,
 body.dark-mode .side-menu,
 body.dark-mode .footer,
 body.dark-mode .footer_social {
   background-color: #23232a !important;
   color: #e5e7eb !important;
+}
+body.dark-mode .latest_blog{
+  background: #18181b;
 }
 body.dark-mode .project,
 body.dark-mode .blog,
@@ -1246,7 +1248,11 @@ body.dark-mode li{
   color: #fff !important;
 }
 
-
+body.dark-mode .featured_projects {
+    margin-top: 0;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
 body.dark-mode .project_info h3,
 body.dark-mode .blog h3,
 body.dark-mode .footer h3,
