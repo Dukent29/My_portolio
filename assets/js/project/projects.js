@@ -1,23 +1,21 @@
-
-  fetch('projects.json')
-    .then(res => res.json())
-    .then(projets => {
-      const projectList = document.getElementById('project-list')
-      projectList.innerHTML = projets.map(p => `
-        <div class="project">
-          <div class="project_img">
-            <img src="${p.image}" alt="${p.title}">
-          </div>
-          <div class="project_info">
-            <h3>${p.title}</h3>
-            <p>${p.description}</p>
-            <ul class="label">
-              ${p.tech.map(t => `<li>${t}</li>`).join('')}
-            </ul>
-            <a href="${p.github_link}" target="_blank" style="color: #6d28d9; text-decoration: underline; font-weight: bold;">
-              Jeter un œil 👀 ↗
-            </a>
+fetch('projects.json')
+  .then(response => response.json())
+  .then(projects => {
+    const projectList = document.getElementById('project-list');
+    projectList.innerHTML = projects.map(project => `
+      <article class="project">
+        <div class="media">
+          <img src="${project.image}" alt="${project.title}" loading="lazy">
+        </div>
+        <div class="body">
+          <h4>${project.title}</h4>
+          <p>${project.description}</p>
+          <div class="actions">
+            ${project.tech.map(tech => `<span class="chip">${tech}</span>`).join('')}
+            <a class="btn btn-ghost" href="${project.github_link}" target="_blank" rel="noopener">Code <i class="bi bi-arrow-up-right"></i></a>
           </div>
         </div>
-      `).join('')
-    })
+      </article>
+    `).join('');
+  })
+  .catch(error => console.error('Error fetching projects:', error));

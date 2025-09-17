@@ -1,5 +1,4 @@
-
-    // Theme toggle with persistence
+// Theme toggle with persistence
     const root = document.documentElement;
     const themeToggle = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('theme');
@@ -28,6 +27,25 @@
     });
 
     // Simple mobile menu (could open a drawer if you want)
-    document.getElementById('openMenu')?.addEventListener('click', ()=>{
-      alert('Menu mobile à brancher (drawer)');
+    document.getElementById('openMenu')?.addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.setAttribute('aria-hidden', 'false');
+      sidebar.style.display = 'block';
+    });
+
+    document.getElementById('closeSidebar')?.addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.setAttribute('aria-hidden', 'true');
+      sidebar.style.display = 'none';
+    });
+
+    // Apply skeleton loading effect
+    window.addEventListener('load', () => {
+      const skeletonElements = document.querySelectorAll('.skeleton');
+
+      setTimeout(() => {
+        skeletonElements.forEach((element) => {
+          element.classList.remove('skeleton');
+        });
+      }, 2000); // Simulate loading delay
     });

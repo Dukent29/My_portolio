@@ -20,5 +20,32 @@
       "boostrap"
     ],
     "github_link": "https://github.com/Dukent29/My_portolio"
+  },
+  {
+    "title": "Pourquoi Postgres + Mongo",
+    "description": "Modéliser relationnel + documents sans dogme. Cas d’usage, pièges et patterns.",
+    "tech": [
+      "PostgreSQL",
+      "MongoDB"
+    ],
+    "github_link": "#"
+  },
+  {
+    "title": "Playwright en 5 minutes",
+    "description": "De zéro à test e2e lisible : sélecteurs, fixtures, CI.",
+    "tech": [
+      "Playwright",
+      "Testing"
+    ],
+    "github_link": "#"
+  },
+  {
+    "title": "Checklist déploiement OVH",
+    "description": "Reverse proxy, logs, SSL, variables d’env, PM2 et santé.",
+    "tech": [
+      "OVH",
+      "Deployment"
+    ],
+    "github_link": "#"
   }
 ]
