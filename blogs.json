@@ -7,7 +7,14 @@
       "Node.js",
       "PostgreSQL"
     ],
-    "github_link": "https://github.com/Dukent29/smart-gardening"
+    "github_link": "https://github.com/Dukent29/smart-gardening",
+    "date": "2025-09-01",
+    "tagline": "Revolutionizing gardening with IoT.",
+    "features": [
+      "Real-time plant monitoring",
+      "Automated irrigation system",
+      "Customizable schedules"
+    ]
   },
   {
     "title": "My portfolio",
@@ -19,7 +26,14 @@
       "json",
       "boostrap"
     ],
-    "github_link": "https://github.com/Dukent29/My_portolio"
+    "github_link": "https://github.com/Dukent29/My_portolio",
+    "date": "2025-08-15",
+    "tagline": "A journey through my coding evolution.",
+    "features": [
+      "Responsive design",
+      "Dynamic project rendering",
+      "Interactive blog section"
+    ]
   },
   {
     "title": "Pourquoi Postgres + Mongo",
@@ -28,7 +42,14 @@
       "PostgreSQL",
       "MongoDB"
     ],
-    "github_link": "#"
+    "github_link": "#",
+    "date": "2025-07-20",
+    "tagline": "The best of both database worlds.",
+    "features": [
+      "Hybrid data modeling",
+      "Use case examples",
+      "Common pitfalls and solutions"
+    ]
   },
   {
     "title": "Playwright en 5 minutes",
@@ -37,7 +58,14 @@
       "Playwright",
       "Testing"
     ],
-    "github_link": "#"
+    "github_link": "#",
+    "date": "2025-06-10",
+    "tagline": "Master end-to-end testing quickly.",
+    "features": [
+      "Quick setup guide",
+      "Readable test selectors",
+      "Integration with CI pipelines"
+    ]
   },
   {
     "title": "Checklist déploiement OVH",
@@ -46,6 +74,13 @@
       "OVH",
       "Deployment"
     ],
-    "github_link": "#"
+    "github_link": "#",
+    "date": "2025-05-05",
+    "tagline": "Streamline your OVH deployments.",
+    "features": [
+      "SSL configuration",
+      "Environment variable management",
+      "Health monitoring tools"
+    ]
   }
 ]

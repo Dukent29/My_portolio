@@ -109,8 +109,11 @@
     .project .body{ padding:16px }
     .project h4{ margin:0 0 6px; font-size:18px }
     .project p{ margin:0 0 10px; color:var(--muted); font-size:14px }
-    .project .actions{ display:flex; justify-content:space-between; align-items:center }
+    .project .actions{ display:flex; align-items:center }
     .chip{ font-size:12px; padding:.35rem .6rem; border-radius:999px; background: rgba(99,102,241,.16); color:var(--brand) }
+    .project .actions .btn{ font-size: 0.875rem;
+    padding: 6px 12px;
+    border-radius: 15px }
 
     /* Blog */
     .blogs{ display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px }
@@ -229,4 +232,12 @@
   100% {
     background-position: 0 0;
   }
+}
+.blogs .blog .actions .chip {
+  margin-right: 3.5px; /* Add spacing between badges */
+  margin-bottom: 3.5px; /* Add vertical spacing */
+}
+.projects .project .actions .chip {
+  margin-right: 3.5px; /* Add spacing between badges */
+  margin-bottom: 3.5px; /* Add vertical spacing */
 }
