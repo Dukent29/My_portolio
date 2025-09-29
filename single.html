@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Détail</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+
+  <style>
+    /* ===== Netflix-ish Single Page ===== */
+
+    :root{
+      /* On garde tes variables de couleurs existantes */
+      /* --primary, --primary-dark, --text, --text-dark, --muted, etc. */
+    }
+
+    /* Layout global (header/footer conservés) */
+    body{
+      background: var(--bg, #0b0b0f);
+      color: var(--text, #e7e7ea);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Global gradient backdrop that never “cuts” */
+    body::before{
+      content:"";
+      position: fixed;
+      z-index: -1;
+      inset: -20vh -20vw -20vh -20vw; /* extend beyond edges to avoid cropping */
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(99,102,241,.18), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(99,102,241,.12), transparent 60%);
+      pointer-events: none;
+      will-change: transform;
+      filter: blur(0); /* keep crisp; set to 6px if you want softer glow */
+    }
+
+    .single-page{ position: relative; }
+
+    /* Smooth fade into footer color to remove the hard band */
+    .single-page::after{
+      content:"";
+      position: absolute;
+      left: 0; right: 0; bottom: -80px;
+      height: 120px;
+      background: linear-gradient(180deg, rgba(0,0,0,0), var(--bg, #0b0b0f));
+      pointer-events: none;
+    }
+
+    /* ===== HERO ===== */
+    .single-page{
+      max-width: min(1200px, 92vw);
+      margin: 0 auto;
+      padding: clamp(16px, 2vw, 24px);
+    }
+
+    .image-container{
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #11131a;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.45),
+        0 1px 0 rgba(255,255,255,.03) inset;
+      isolation: isolate;
+    }
+
+    .image-container img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      filter: saturate(1.1) contrast(1.02) brightness(.95);
+      transition: transform .6s cubic-bezier(.22,.61,.36,1);
+    }
+
+    .image-container:hover img{
+      transform: scale(1.045);
+    }
+
+    /* gradient sombre façon Netflix */
+    .image-container::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.0) 0%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.75) 100%),
+        radial-gradient(60% 80% at 10% 50%, rgba(0,0,0,.35), transparent 70%);
+      pointer-events:none;
+      z-index:1;
+    }
+
+    .overlay{
+      position:absolute; inset:0;
+      z-index:2;
+      display:flex;
+      align-items:flex-end;
+      padding: clamp(18px, 4vw, 36px);
+      gap: 18px;
+    }
+
+    .overlay-inner{
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .title-wrap{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .title-kicker{
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .overlay h1{
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: .2px;
+      text-shadow: 0 8px 20px rgba(0,0,0,.55);
+    }
+
+    /* Tagline sous le titre (courte punchline) */
+    .tagline{
+      margin-top: 6px;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.86);
+      font-style: italic;
+      text-shadow: 0 4px 14px rgba(0,0,0,.45);
+    }
+
+    /* Tech badges */
+    .tech{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tech span{
+      background: rgba(99,102,241,.16);
+      border: 1px solid rgba(99,102,241,.35);
+      color:#fff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size:.84rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing:.04em;
+      box-shadow: 0 6px 18px rgba(99,102,241,.18);
+      backdrop-filter: blur(6px);
+    }
+
+    /* La description suit exactement la largeur de l'image */
+    .description{
+      margin: clamp(18px, 3.2vw, 28px) 0 0;  /* plus d'auto-centre */
+      max-width: none;                       /* enlève les 900px */
+      width: 100%;  
+      padding: 1.5rem;                         /* même largeur que le hero */
+      border-radius: 14px;
+      box-sizing: border-box;
+      line-height: 1.75;
+      color: var(--text-dark, #cfd2d9);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Liste des features (style check ✓) */
+    .features-list{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .features-list li{
+      position: relative;
+      padding: 10px 14px 10px 34px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--text-dark, #cfd2d9);
+      line-height: 1.55;
+      backdrop-filter: blur(6px);
+    }
+
+    .features-list li::before{
+      content: "✔";
+      position: absolute;
+      left: 12px; top: 50%; transform: translateY(-50%);
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* (option) bouton GitHub plus lisible, avec icône */
+    .github-link{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:16px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 800;
+      text-decoration:none;
+      color:#0b0b0f;
+      background:#fff;                       /* contraste façon Netflix */
+      box-shadow: 0 12px 28px rgba(0,0,0,.45);
+      transition: transform .15s ease, box-shadow .3s ease;
+      border: none;
+    }
+    .github-link:hover{ transform:translateY(-2px); box-shadow:0 18px 36px rgba(0,0,0,.55); }
+    .github-link i{ font-size:1.2rem; }
+
+    /* ===== Header/Footer existants ===== */
+    .site-header .brand .pill{ background: var(--primary); color:#0b0b0f; }
+
+    /* Responsive love */
+    @media (max-width: 700px){
+      .overlay{ padding: 18px; }
+      .description{ padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Aller à l’accueil">
+        <span class="pill">Kev</span><span>Stack</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/mulinda-kevin-bruce/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <li><a href="https://github.com/Dukent29" target="_blank" rel="noreferrer noopener" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+        </ul>
+        <button id="openMenu" class="menu" aria-label="Ouvrir le menu"><i class="bi bi-list"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="single-page">
+    <div class="image-container">
+      <img id="item-image" src="" alt="">
+      <div class="overlay">
+        <div class="overlay-inner">
+          <div class="title-wrap">
+            <span class="title-kicker">Projet</span>
+            <!-- tu peux changer le texte du kicker si besoin -->
+          </div>
+          <h1 id="item-title">Titre</h1>
+          <p id="item-tagline" class="tagline">Tagline</p> <!-- Added tagline -->
+          <p id="item-date" class="date">Date</p> <!-- Added date -->
+          <div class="tech" id="item-tech"></div>
+          <!-- Le bouton GitHub sera ajouté par ton JS et prend le style CTA ci-dessus -->
+        </div>
+      </div>
+    </div>
+
+    <p class="description" id="item-description">Description</p>
+
+    <ul id="item-features" class="features"> <!-- Added features -->
+      <!-- Features will be dynamically added here -->
+    </ul>
+  </main>
+
+  <footer id="contact">
+    <div class="container foot-grid">
+      <div>
+        <h3>On bosse ensemble ?</h3>
+        <p style="color:var(--muted); margin:.4rem 0 1rem">Toujours partant pour des projets qui ont du sens. Dispo en alternance Bac+5 (sept. 2025).</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="openContact2">Me contacter</button>
+          <button class="btn btn-ghost" id="themeToggle" aria-pressed="false">🌙 Thème</button>
+        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/mulinda-kevin-bruce/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Dukent29" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/kevin.bruce_/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:12px; color:var(--muted); font-size:14px">© 2025 Kevin.dev — Tous droits réservés</div>
+  </footer>
+
+  <!-- JS: on garde exactement ta logique -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const type = urlParams.get('type'); // "projects" or "blogs"
+    const id = urlParams.get('id');
+
+    fetch(`${type}.json`)
+      .then(response => response.json())
+      .then(data => {
+        const item = data[id];
+
+        if (item) {
+          document.getElementById('item-image').src = item.image || '';
+          document.getElementById('item-title').textContent = item.title;
+          document.getElementById('item-description').textContent = item.description;
+
+          // Tagline (optionnelle)
+          if (item.tagline) {
+            const tag = document.getElementById('item-tagline');
+            tag.textContent = item.tagline;
+          }
+
+          // Features (optionnelles)
+          if (Array.isArray(item.features) && item.features.length) {
+            const ul = document.getElementById('item-features');
+            ul.className = 'features-list'; // Apply the new class
+            item.features.forEach(f => {
+              const li = document.createElement('li');
+              li.textContent = f;
+              ul.appendChild(li);
+            });
+          }
+
+          const techContainer = document.getElementById('item-tech');
+          item.tech.forEach(tech => {
+            const techBadge = document.createElement('span');
+            techBadge.textContent = tech;
+            techContainer.appendChild(techBadge);
+          });
+
+          if (item.github_link) {
+            const githubLink = document.createElement('a');
+            githubLink.href = item.github_link;
+            githubLink.target = '_blank';
+            githubLink.rel = 'noopener';
+            githubLink.className = 'github-link';
+            githubLink.textContent = 'View on GitHub';
+            document.querySelector('.overlay .overlay-inner').appendChild(githubLink);
+          }
+        } else {
+          document.querySelector('.single-page').innerHTML = '<p>Item not found.</p>';
+        }
+      })
+      .catch(() => {
+        document.querySelector('.single-page').innerHTML = '<p>Error loading data.</p>';
+      });
+  </script>
+</body>
+</html>

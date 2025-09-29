@@ -7,7 +7,14 @@
       "MongoDB"
     ],
     "image": "images/david-pupaza-Q9-QEy1_jYI-unsplash.jpg",
-    "github_link": "https://github.com/Dukent29/taskflowAPI"
+    "github_link": "https://github.com/Dukent29/taskflowAPI",
+    "date": "2025-05-15",
+    "tagline": "Collaborate and track tasks effortlessly.",
+    "features": [
+      "Real-time updates",
+      "Team collaboration",
+      "Progress tracking"
+    ]
   },
   {
     "title": "Smart Garden",
@@ -17,7 +24,14 @@
       "Next.js"
     ],
     "image": "images/zoe-rich.jpg",
-    "github_link": "https://github.com/Dukent29/smart-gardening"
+    "github_link": "https://github.com/Dukent29/smart-gardening",
+    "date": "2025-06-01",
+    "tagline": "Revolutionizing gardening with IoT.",
+    "features": [
+      "Automated irrigation",
+      "Plant health monitoring",
+      "Custom schedules"
+    ]
   },
   {
     "title": "bookMe",
@@ -27,6 +41,13 @@
       "Node.js"
     ],
     "image": "images/gruppopiu-tKnt5O4q-f8-unsplash.jpg",
-    "github_link": "https://github.com/Dukent29/bookmi"
+    "github_link": "https://github.com/Dukent29/bookmi",
+    "date": "2025-07-20",
+    "tagline": "Simplify online bookings.",
+    "features": [
+      "User-friendly interface",
+      "Event scheduling",
+      "Provider management"
+    ]
   }
 ]
